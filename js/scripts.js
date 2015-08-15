@@ -5,7 +5,6 @@ var Player = {
 };
 var context = null;
 Player.init = function(){
-    console.log('init');
     //create context
     try {
       window.AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -220,7 +219,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     background.style.backgroundImage = 'url('+imageUrl+')';
                 }
                 else{
-                    cover.style.backgroundImage = 'url("../img/dummy_cover.jpg")';
+                    cover.style.backgroundImage = 'url("/img/dummy_cover.jpg")';
                     background.style.backgroundImage = 'none';
                 }
             },
@@ -237,19 +236,16 @@ document.addEventListener('DOMContentLoaded', function() {
     //play button
     var playButton = document.getElementById('play-button');
     playButton.addEventListener("click",function(){
-        console.log('click #play-button');
         Player.play();
     });
     //stop button
     var stopButton = document.getElementById('stop-button');
     stopButton.addEventListener("click",function(){
-        console.log('click #stop-button');
         Player.stop();
     });
     //select file
     var fileInput = document.getElementById('file-input');
-    fileInput.addEventListener('change', function(e) {  
-        console.log('change #file-input');
+    fileInput.addEventListener('change', function(e) {
         var reader = new FileReader();
         file = e.target.files[0];
         reader.onload = function(e) {
