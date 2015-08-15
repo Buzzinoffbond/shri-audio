@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     background.style.backgroundImage = 'url('+imageUrl+')';
                 }
                 else{
-                    cover.style.backgroundImage = 'url("/img/dummy_cover.jpg")';
+                    cover.style.backgroundImage = 'url("img/dummy_cover.jpg")';
                     background.style.backgroundImage = 'none';
                 }
             },
