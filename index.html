@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Web Audio API</title>
+    <meta name="description" content="Тестовое задание в Школу Разработки Интерфейсов.">
+    <meta name="viewport" content="widdiv=device-widdiv, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/fluidable-min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="background" class="plr_background"></div>
+    <button id="drop-zone" class="plr_drop_zone">
+        <p>Бросайте аудиофайл прямо здесь</p><i class="fa fa-file-audio-o"></i></button>
+    <section class="plr">
+        <div class="container plr_table">
+            <div class="plr_container_middle">
+                <div class="col-group plr_container">
+                    <div class="col-6 plr_main" id="cover">
+                        <div class="plr_visualization" id="visualization"></div>
+                    </div>
+                    <div class="col-6 plr_options">
+                        <div class="plr_playback">
+                            <button class="plr_playback_control" id="play-button"><i class="fa fa-play"></i></button>
+                            <button class="plr_playback_control" id="stop-button"><i class="fa fa-stop"></i></button>
+                        </div>
+                        <p class="plr_options_equaliser">
+                            <label for="equaliser">Эквалайзер: </label>
+                            <select id="equaliser">
+                                <option value="normal" selected>Normal</option>
+                                <option value="pop">Pop</option>
+                                <option value="rock">Rock</option>
+                                <option value="jazz">Jazz</option>
+                                <option value="classic">Classic</option>
+                            </select>
+                        </p>
+                        <p>Перенесите файл в область ниже или выберите
+                            <input accept="audio/*" type="file" id="file-input">
+                        </p>
+                        <p><i id="status" class=""></i> <span id="filename-container"></span></p>
+                        <p class="plr_meta" id="meta">
+                            Исполнитель: <span id="artist"></span>
+                            <br> Название: <span id="title"></span>
+                            <br> Альбом: <span id="album"></span>
+                            <br> Год: <span id="year"></span>
+                            <br>
+                        </p>
+                        <div class="plr_drop_zone"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/id3-minimized.js" type="text/javascript"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+html,
+body {
+    color: #FFF;
+    font-size: 16px;
+    line-height: 1.4;
+    background-color: #222;
+}
+
+.plr {
+    height: 600px;
+    height: 100vh;
+    position: relative;
+    z-index: 10;
+}
+
+.plr_background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    background-size: cover;
+    background-position: center;
+}
+
+.plr_container {
+    box-shadow: 0 0 10px #222;
+    border-radius: 5px;
+}
+
+.plr_table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.plr_container_middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.plr_main {
+    background-color: #FFF;
+    color: #222;
+    padding: 1em;
+    background: url('../img/dummy_cover.jpg') center;
+    background-size: cover;
+    height: 582px;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+.plr_options {
+    background-color: #FFF;
+    color: #333;
+    padding: 1em;
+    height: 582px;
+}
+
+.plr_playback_control {
+    color: #222;
+    background: none;
+    border: none;
+    font-size: 2em;
+    outline: none;
+}
+
+.plr_playback_control:hover {
+    color: #000;
+}
+
+.plr_options_control {
+    color: #222;
+    padding: 5px;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+    text-align: center;
+}
+
+.plr_drop_zone {
+    display: none;
+    position: absolute;
+    border: 0;
+    background: #000;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    color: #FFF;
+    outline: none;
+    z-index: 999;
+    opacity: 0.8;
+    font-size: 4em;
+}
+
+.plr_drop_zone i {
+    font-size: 2.5em;
+}
+
+.plr_visualization {
+    position: absolute;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.plr_meta {
+    display: none;
+}
+
+
+/*Helpers*/
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+@media only screen and (min-width: 640px) {
+    html,
+    body {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    html,
+    body {
+        font-size: 18px;
+    }
+}
